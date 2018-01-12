@@ -1,0 +1,8 @@
+/.idea
+.editorconfig
+.gitattributes
+.gitignore
+package-lock.json
+yarn.lock
+/.git
+/src

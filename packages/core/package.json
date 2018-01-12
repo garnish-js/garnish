@@ -1,0 +1,14 @@
+{
+  "name": "@garnish/core",
+  "version": "0.0.0",
+  "description": "garnish is TypeScript making Cli Framework",
+  "keywords": [
+    "typescript",
+    "cli"
+  ],
+  "author": "David Kwon",
+  "license": "MIT",
+  "peerDependencies": {
+    "reflect-metadata": "^0.1.10"
+  }
+}
