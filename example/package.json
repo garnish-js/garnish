@@ -1,0 +1,20 @@
+{
+  "name": "nest-typescript-starter",
+  "version": "1.0.0",
+  "description": "Nest TypeScript starter repository",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "prestart:prod": "tsc",
+    "start:prod": "node dist/main.js"
+  },
+  "dependencies": {
+    "@garnish/common": "^0.0.0",
+    "@garnish/core": "^0.0.0",
+    "reflect-metadata": "^0.1.10",
+    "typescript": "^2.6.2"
+  },
+  "devDependencies": {
+    "ts-node": "^4.1.0"
+  }
+}

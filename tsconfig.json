@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     /* Basic Options */
-    "target": "es5",
+    "target": "es6",
     "module": "commonjs",
      "declaration": true,
      "sourceMap": true,
@@ -16,7 +16,7 @@
     "lib": [
       "es2015"
     ],
-    // "noImplicitAny": true,                 /* Raise error on expressions and declarations with an implied 'any' type. */
+    "noImplicitAny": false,
     // "strictNullChecks": true,              /* Enable strict null checks. */
     // "strictFunctionTypes": true,           /* Enable strict checking of function types. */
     // "noImplicitThis": true,                /* Raise error on 'this' expressions with an implied 'any' type. */

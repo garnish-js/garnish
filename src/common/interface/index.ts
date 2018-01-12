@@ -1,0 +1,1 @@
+export {IGanish} from './command';

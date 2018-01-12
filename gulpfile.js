@@ -1,6 +1,7 @@
 const path = require('path');
 
 const gulp = require('gulp');
+const gulpCopy = require('gulp-copy');
 const ts = require('gulp-typescript');
 const gulpSequence = require('gulp-sequence');
 
@@ -11,7 +12,8 @@ const dist = distIndex < 0 ? 'node_modules/@garnish' : process.argv[distIndex + 
 
 const config = {
   src: 'src',
-  dist: dist
+  dist: dist,
+  example: 'example'
 };
 
 const projects = {
@@ -29,14 +31,15 @@ modules.forEach(module => {
     return project
       .src()
       .pipe(project())
-      .pipe(gulp.dest(dist));
+      .pipe(gulp.dest(dist))
+      .pipe(gulpCopy(config.example));
   })
 });
 
 gulp.task('watch', () => {
   modules.forEach(module => {
     let modulePath = path.join(config.src, module, '**', '*.ts');
-    gulp.watch([modulePath], ['tslint', module]);
+    gulp.watch([modulePath], [module]);
   })
 });
 

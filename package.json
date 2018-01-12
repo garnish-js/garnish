@@ -14,8 +14,8 @@
   "author": "David Kwon <tienne89@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@garnish/core": "^0.0.0",
     "@garnish/common": "^0.0.0",
+    "@garnish/core": "^0.0.0",
     "glob": "^7.1.2",
     "inquirer": "^5.0.0",
     "lowdb": "^1.0.0",
@@ -28,6 +28,7 @@
     "@types/node": "^9.3.0",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
+    "gulp-copy": "^1.1.0",
     "gulp-sequence": "^1.0.0",
     "gulp-typescript": "^4.0.0-alpha.1",
     "lerna": "^2.7.0",

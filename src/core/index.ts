@@ -1,1 +1,3 @@
-export * from './deco-application';
+
+export * from './garnish';
+export * from './garnish-application';

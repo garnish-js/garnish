@@ -1,2 +1,2 @@
 export * from './common';
-export * from './core/deco-application';
+export * from './core/garnish-application';
