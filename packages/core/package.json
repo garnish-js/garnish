@@ -4,11 +4,17 @@
   "description": "garnish is TypeScript making Cli Framework",
   "keywords": [
     "typescript",
-    "cli"
+    "cli",
+    "command",
+    "command line",
+    "command line interface"
   ],
-  "main": "index.js",
   "author": "David Kwon",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/garnish-js/garnish.git"
+  },
   "peerDependencies": {
     "reflect-metadata": "^0.1.10"
   }
