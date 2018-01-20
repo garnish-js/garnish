@@ -1,1 +1,2 @@
-export {IGanish} from './command';
+export * from './command';
+export * from './metatype.interface';
