@@ -1,2 +1,3 @@
-export {IGanish} from './interface';
+export * from './interface';
 export * from './decorator';
+export * from './support';

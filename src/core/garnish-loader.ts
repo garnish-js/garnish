@@ -8,7 +8,6 @@ export class GarnishLoader {
 
   public parse(command: Command, ) {
     this.parseCommand(command);
-    console.log(this.container.getCommands());
   }
 
   private parseCommand(command: Command, scope = []) {
