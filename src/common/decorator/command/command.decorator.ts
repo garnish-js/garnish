@@ -1,9 +1,7 @@
 import 'reflect-metadata';
 import {CommandMetadata} from '../../interface/command/command-metadata.interface';
 
-export function validateKey(keys: any[]) {
-  //
-}
+export declare function keys<T extends object>(): Array<keyof T>;
 
 export function Command(obj: any): ClassDecorator {
   return (target: object) => {
