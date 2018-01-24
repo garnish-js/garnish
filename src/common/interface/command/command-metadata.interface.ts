@@ -5,4 +5,5 @@ export interface CommandMetadata {
   description: string;
   commands?: GarnishCommand[] | any[];
   options?: GarnishOption[] | any[];
+  providers?: any[];
 }

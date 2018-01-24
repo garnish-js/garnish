@@ -1,9 +1,7 @@
 import 'reflect-metadata';
-import {CommandMetadata} from '../../interface/command/command-metadata.interface';
+import {CommandMetadata} from '../../interface/command';
 
-export declare function keys<T extends object>(): Array<keyof T>;
-
-export function Command(obj: any): ClassDecorator {
+export function Command(obj: CommandMetadata): ClassDecorator {
   return (target: object) => {
     for (const property in obj) {
       if (obj.hasOwnProperty(property)) {

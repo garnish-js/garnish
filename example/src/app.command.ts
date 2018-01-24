@@ -8,7 +8,8 @@ import {EnvirmentCommand} from './envirment/envirment.command';
     InitCommand,
     EnvirmentCommand
   ],
-  options: []
+  options: [],
+  providers: []
 })
 export class AppCommand {
   //
