@@ -28,4 +28,23 @@ export class CommandContainer {
   public getCommands() {
     return this.commands;
   }
+
+  public addRelatedCommand(relatedCommand: GarnishCommandMetatype, token: string) {
+    if (!this.commands.has(token)) {
+      return;
+    }
+
+    const command = this.commands.get(token);
+    console.log(command);
+    // const parent = command.metatype;
+    //
+    // const { type, dynamicMetadata } = this.extractMetadata(relatedModule);
+    // const relatedModuleToken = this.moduleTokenFactory.create(
+    //   type,
+    //   [].concat(module.scope, parent),
+    //   dynamicMetadata,
+    // );
+    // const related = this.modules.get(relatedModuleToken);
+    // module.addRelatedModule(related);
+  }
 }

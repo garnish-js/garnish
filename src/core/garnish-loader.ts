@@ -1,5 +1,6 @@
 import 'reflect-metadata';
 import {Command, CommandContainer} from './command';
+import {GarnishCommandMetatype} from '@garnish/common';
 
 export class GarnishLoader {
   public constructor(private container: CommandContainer) {
@@ -11,7 +12,18 @@ export class GarnishLoader {
     this.parseCommandForDependencies();
   }
 
-  private parseCommand(command: Command, scope = []) {
+  public parseCommandForDependencies() {
+    const commands = this.container.getCommands();
+
+    commands.forEach(({metatype}, token) => {
+      this.reflectRelatedCommands(metatype, token);
+      // this.reflectComponents(metatype, token);
+      // this.reflectControllers(metatype, token);
+      // this.reflectExports(metatype, token);
+    });
+  }
+
+  public parseCommand(command: Command, scope = []) {
     this.storeCommand(command, scope);
 
     const commands = this.getReflectMetadata(command, 'commands');
@@ -29,14 +41,7 @@ export class GarnishLoader {
     return Reflect.getMetadata(metadataValue, metadataKey) || [];
   }
 
-  public parseCommandForDependencies() {
-    const commands = this.container.getCommands();
-    // console.log(commands);
-    commands.forEach(({ metatype }, token) => {
-      // this.reflectRelatedModules(metatype, token);
-      // this.reflectComponents(metatype, token);
-      // this.reflectControllers(metatype, token);
-      // this.reflectExports(metatype, token);
-    });
+  private reflectRelatedCommands(metaCommand: GarnishCommandMetatype, token: string) {
+    //
   }
 }
