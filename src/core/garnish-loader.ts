@@ -31,7 +31,7 @@ export class GarnishLoader {
 
   public parseCommandForDependencies() {
     const commands = this.container.getCommands();
-    console.log(commands);
+    // console.log(commands);
     commands.forEach(({ metatype }, token) => {
       // this.reflectRelatedModules(metatype, token);
       // this.reflectComponents(metatype, token);

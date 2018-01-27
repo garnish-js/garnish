@@ -23,16 +23,6 @@ export class CommandContainer {
 
     const command = new Command(metaCommand, scope, this);
     this.commands.set(token, command);
-
-    this.isGlobalCommand(metaCommand) && this.addGlobalCommand(command);
-  }
-
-  public isGlobalCommand(metaCommand: GarnishCommandMetatype) {
-    return !!Reflect.getMetadata('__globalCommand__', metaCommand);
-  }
-
-  public addGlobalCommand(command: Command) {
-    this.globalCommands.add(command);
   }
 
   public getCommands() {
