@@ -3,10 +3,12 @@ import {CommandContainer} from './command-container';
 
 export class Command {
   constructor(
-    private metatype: GarnishCommandMetatype,
-    private scope: GarnishCommandMetatype[],
-    private container: CommandContainer
-  ) {
+    private _metatype: GarnishCommandMetatype,
+    private _scope: GarnishCommandMetatype[],
+    private _container: CommandContainer
+  ) {}
 
+  get metatype(): GarnishCommandMetatype {
+    return this._metatype;
   }
 }

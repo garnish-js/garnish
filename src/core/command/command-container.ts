@@ -35,8 +35,7 @@ export class CommandContainer {
     }
 
     const command = this.commands.get(token);
-    console.log(command);
-    // const parent = command.metatype;
+    const parent = command.metatype;
     //
     // const { type, dynamicMetadata } = this.extractMetadata(relatedModule);
     // const relatedModuleToken = this.moduleTokenFactory.create(

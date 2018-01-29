@@ -42,6 +42,14 @@ export class GarnishLoader {
   }
 
   private reflectRelatedCommands(metaCommand: GarnishCommandMetatype, token: string) {
-    //
+    const commands = [
+      ...this.getReflectMetadata(metaCommand, 'commands')
+    ];
+
+    commands.map(related => this.storeRelatedCommand(related, token));
+  }
+
+  private storeRelatedCommand(related, token) {
+    this.container.addRelatedCommand(related, token);
   }
 }
