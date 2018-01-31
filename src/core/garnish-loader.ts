@@ -49,6 +49,10 @@ export class GarnishLoader {
     commands.map(related => this.storeRelatedCommand(related, token));
   }
 
+  private reflectOptions(metaCommand: GarnishCommandMetatype, token: string) {
+    //
+  }
+
   private storeRelatedCommand(related, token) {
     this.container.addRelatedCommand(related, token);
   }

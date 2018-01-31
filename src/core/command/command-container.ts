@@ -36,14 +36,12 @@ export class CommandContainer {
 
     const command = this.commands.get(token);
     const parent = command.metatype;
-    //
-    // const { type, dynamicMetadata } = this.extractMetadata(relatedModule);
-    // const relatedModuleToken = this.moduleTokenFactory.create(
-    //   type,
-    //   [].concat(module.scope, parent),
-    //   dynamicMetadata,
-    // );
-    // const related = this.modules.get(relatedModuleToken);
-    // module.addRelatedModule(related);
+
+    const relatedCommandToken = this.tokenFactory.create(
+      relatedCommand,
+      [].concat(command.scope, parent)
+    );
+    const related = this.commands.get(relatedCommandToken);
+    command.addRelatedCommand(related);
   }
 }
