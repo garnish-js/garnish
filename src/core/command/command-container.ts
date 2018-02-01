@@ -44,4 +44,8 @@ export class CommandContainer {
     const related = this.commands.get(relatedCommandToken);
     command.addRelatedCommand(related);
   }
+
+  public addOption() {
+    //
+  }
 }

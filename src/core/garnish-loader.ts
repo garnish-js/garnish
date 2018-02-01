@@ -17,7 +17,7 @@ export class GarnishLoader {
 
     commands.forEach(({metatype}, token) => {
       this.reflectRelatedCommands(metatype, token);
-      // this.reflectComponents(metatype, token);
+      this.reflectOptions(metatype, token);
       // this.reflectControllers(metatype, token);
       // this.reflectExports(metatype, token);
     });
@@ -50,10 +50,18 @@ export class GarnishLoader {
   }
 
   private reflectOptions(metaCommand: GarnishCommandMetatype, token: string) {
-    //
+    const options = [
+      ...this.getReflectMetadata(metaCommand, 'options')
+    ];
+
+    options.map(related => this.storeOption(related, token));
   }
 
   private storeRelatedCommand(related, token) {
+    this.container.addRelatedCommand(related, token);
+  }
+
+  private storeOption(related, token) {
     this.container.addRelatedCommand(related, token);
   }
 }
