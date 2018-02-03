@@ -3,4 +3,8 @@ import {Command} from '@garnish/common';
 @Command({
   description: ''
 })
-export class InitCommand {}
+export class InitCommand {
+  run() {
+    //
+  }
+}

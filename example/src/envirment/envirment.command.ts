@@ -1,4 +1,14 @@
 import {Command} from '@garnish/common';
+import {TestOption} from './test.option';
 
-@Command({})
-export class EnvirmentCommand {}
+@Command({
+  description: '',
+  options: [
+    TestOption
+  ]
+})
+export class EnvirmentCommand {
+  run() {
+    //
+  }
+}

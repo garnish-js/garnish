@@ -62,6 +62,6 @@ export class GarnishLoader {
   }
 
   private storeOption(related, token) {
-    this.container.addRelatedCommand(related, token);
+    // this.container.addOption(related, token);
   }
 }

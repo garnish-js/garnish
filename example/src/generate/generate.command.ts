@@ -8,5 +8,7 @@ import {CreateCommandCommand} from './command/create-command.command';
   ],
 })
 export class GenerateCommand {
-  //
+  run() {
+    //
+  }
 }

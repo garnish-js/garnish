@@ -1,5 +1,5 @@
 import {GarnishCommand} from './garnish-command.interface';
-import {GarnishOption} from '../option';
+import {GarnishOption} from '../option/garnish-option.interface';
 
 export interface CommandMetadata {
   description: string;
