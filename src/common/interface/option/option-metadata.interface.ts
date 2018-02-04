@@ -1,4 +1,4 @@
-export interface OptionMetadataInterface {
+export interface OptionMetadata {
   description?: string;
   name?: string;
   alias?: string;

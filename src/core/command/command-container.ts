@@ -2,6 +2,7 @@ import {CommandsContainer} from './commands-container';
 import {GarnishLoader} from '../garnish-loader';
 import {CommandInvalidException} from './command-invalide.exception';
 import {GarnishCommandMetatype} from '@garnish/common';
+import {GarnishOptionMetatype} from '@garnish/common';
 import {CommandTokenFactory} from './command-token-factory';
 import {Command} from './command';
 
@@ -45,7 +46,14 @@ export class CommandContainer {
     command.addRelatedCommand(related);
   }
 
-  public addOption() {
-    //
+  public addOption(option: GarnishOptionMetatype, token: string) {
+    if (!this.commands.has(token)) {
+      return;
+    }
+    const command = this.commands.get(token);
+    // command.addOptions(command);
+    console.log(command);
+    console.log(option);
+    console.log(token);
   }
 }

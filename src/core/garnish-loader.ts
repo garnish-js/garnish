@@ -54,14 +54,14 @@ export class GarnishLoader {
       ...this.getReflectMetadata(metaCommand, 'options')
     ];
 
-    options.map(related => this.storeOption(related, token));
+    options.map(option => this.storeOption(option, token));
   }
 
   private storeRelatedCommand(related, token) {
     this.container.addRelatedCommand(related, token);
   }
 
-  private storeOption(related, token) {
-    // this.container.addOption(related, token);
+  private storeOption(option, token) {
+    this.container.addOption(option, token);
   }
 }

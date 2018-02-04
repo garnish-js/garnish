@@ -1,7 +1,7 @@
 import 'reflect-metadata';
-import {OptionMetadataInterface} from '../../interface/option';
+import {OptionMetadata} from '../../interface/option';
 
-export function Option(obj?: OptionMetadataInterface): ClassDecorator {
+export function Option(obj?: OptionMetadata): ClassDecorator {
   return (target: object) => {
     //
   };

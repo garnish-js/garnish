@@ -21,4 +21,6 @@ export class Command {
   public addRelatedCommand(related: Command) {
     this._relatedCommand.add(related);
   }
+
+  // public addOption(option: )
 }
