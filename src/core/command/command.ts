@@ -3,6 +3,7 @@ import {CommandContainer} from './command-container';
 
 export class Command {
   private _relatedCommand = new Set<Command>();
+  private _options = new Set<any>();
 
   constructor(
     private _metatype: GarnishCommandMetatype,
@@ -22,5 +23,7 @@ export class Command {
     this._relatedCommand.add(related);
   }
 
-  // public addOption(option: )
+  public addOption(option: any) {
+    this._options.add(option);
+  }
 }

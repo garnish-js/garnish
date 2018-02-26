@@ -51,9 +51,11 @@ export class CommandContainer {
       return;
     }
     const command = this.commands.get(token);
+    command.addOption(option);
+
     // command.addOptions(command);
-    console.log(command);
-    console.log(option);
-    console.log(token);
+    // console.log(command);
+    // console.log(option);
+    // console.log(token);
   }
 }
